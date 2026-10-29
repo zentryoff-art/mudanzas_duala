@@ -244,6 +244,11 @@
   // La furgoneta cruza Sevilla con el scroll
   var van = document.querySelector('.van');
   var wheels = gsap.utils.toArray('.van .wheel');
+  // Cada rueda gira sobre su propio eje (centro del círculo en coordenadas del SVG)
+  wheels.forEach(function (w) {
+    var c = w.querySelector('circle');
+    gsap.set(w, { svgOrigin: c.getAttribute('cx') + ' ' + c.getAttribute('cy') });
+  });
   gsap.fromTo(van, { x: function () { return -van.getBoundingClientRect().width * 1.05; } }, {
     x: function () { return window.innerWidth; }, ease: 'none',
     scrollTrigger: {

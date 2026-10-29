@@ -268,7 +268,6 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .van .v-wheel { fill: #0D305A; stroke: #FFFFFF; stroke-width: 4; }
 .van .v-hub { fill: #DE8A1C; }
 .van .v-spoke { stroke: #FFFFFF; stroke-width: 4; stroke-linecap: round; fill: none; }
-.van .wheel { transform-box: fill-box; transform-origin: center; }
 
 /* ---------- servicios ---------- */
 .bento { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-4); }
